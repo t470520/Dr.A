@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="tru.dr.a.MainActivity$PlaceholderFragment" >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:id="@+id/scrollView2">
+
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="20dip"
+                android:text="Network traffic status"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Transmitted Bytes"
+                android:textAlignment="center"
+                android:textColor="#00ff00"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/TX"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_below="@+id/textView2"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TX"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Received Bytes"
+                android:textColor="#ff0000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/RX"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/wifi"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RX"
+                android:layout_marginTop="15dp"
+                android:text="WiFi State" />
+
+            <Button
+                android:id="@+id/allapp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wifi"
+                android:layout_marginTop="15dp"
+                android:text="Show all apps" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" >
+
+            <TextView
+                android:id="@+id/textView0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="20dip"
+                android:text="Device resource usage"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cpu_usage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView0"
+                android:layout_below="@+id/textView0"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="CPU usage"
+                android:textAlignment="center"
+                android:textColor="#00ff00"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/CPU"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/cpu_usage"
+                android:layout_below="@+id/cpu_usage"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/ram_usage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="RAM usage"
+                android:layout_below="@+id/CPU"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                android:textColor="#00ff00"
+                android:textSize="24sp" />
+
+              <TextView
+                android:id="@+id/RAM"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ram_usage"
+                android:layout_below="@+id/ram_usage"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textSize="20sp" />
+
+              <Button
+                  android:id="@+id/checkBattery"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                   android:layout_below="@+id/RAM"
+                   android:layout_marginTop="15dp"
+                  android:text="Batter usage summary" />
+              
+              <Button
+			        android:id="@+id/btn_running_app"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+					android:layout_below="@+id/checkBattery"
+                    android:layout_marginTop="15dp"
+			        android:text="Check running Apps" />
+
+              <Button
+			        android:id="@+id/btn_Blok"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+					android:layout_below="@+id/btn_running_app"
+                    android:layout_marginTop="15dp"
+			        android:text="Blok Permission list" />
+            
+        </RelativeLayout>
+    </ScrollView>
+
+    
+
+</RelativeLayout>
